@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1>sono il create</h1>
+    <h1>sono lo show</h1>
+        <img src="{{$comic->thumb}}" alt="">
+
 @endsection
