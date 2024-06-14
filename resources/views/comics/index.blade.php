@@ -2,14 +2,14 @@
 
 @section('content')
     <div class="container">
-        <h1 class="text-center">I miei fumetti</h1>
+        <h1 class="text-center mb-3">I MIEI FUMETTI</h1>
         <table class="table">
             <thead>
                 <tr>
-                    <th scope="col">titolo</th>
-                    <th scope="col">serie</th>
-                    <th scope="col">tipo</th>
-                    <th scope="col">prezzo</th>
+                    <th scope="col">Titolo</th>
+                    <th scope="col">Serie</th>
+                    <th scope="col">Tipo</th>
+                    <th scope="col">Prezzo</th>
                 </tr>
             </thead>
             <tbody>
