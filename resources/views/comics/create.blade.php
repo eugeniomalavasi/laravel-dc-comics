@@ -4,7 +4,9 @@
     <div class="container">
         <h1 class="text-center">Inserisci i dati del nuovo fumetto</h1>
 
-        <form action="post">
+        <form action="{{ route('comics.store') }}" method="POST">
+
+            @csrf
 
             <div class="mb-3">
                 <label for="title" class="form-label">Titolo fumetto</label>
@@ -14,6 +16,11 @@
             <div class="mb-3 w-50">
                 <label for="description" class="form-label">Descrizione</label>
                 <textarea class="form-control" id="description" name="description" rows="3"></textarea>
+            </div>
+
+            <div class="mb-3">
+                <label for="img" class="form-label">Url immagine</label>
+                <input type="text" class="form-control w-50" name="img" id="img">
             </div>
 
             <div class="mb-3">
@@ -32,9 +39,11 @@
             </div>
 
             <div class="mb-3">
-                <label for="img" class="form-label">Url immagine</label>
-                <input type="text" class="form-control w-50" name="img" id="img">
+                <label for="type" class="form-label">Tipo fumetto</label>
+                <input type="text" class="form-control w-50" name="type" id="type">
             </div>
+
+            <button class="btn btn-success" type="submit">Salva</button>
         </form>
     </div>
 @endsection
