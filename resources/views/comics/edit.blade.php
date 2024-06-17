@@ -20,7 +20,7 @@
 
             <div class="mb-3">
                 <label for="img" class="form-label">url immagine</label>
-                <input type="img" class="form-control" name="img" id="img" value="{{ $comic->thumb }}">
+                <input type="text" class="form-control" name="thumb" id="img" value="{{ $comic->thumb }}">
             </div>
 
             <div class="mb-3">

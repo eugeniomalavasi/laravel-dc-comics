@@ -4,8 +4,8 @@
     <div class="container border border-3 rounded-3 border-danger p-3">
         <h1 class="text-center mb-3">{{ $comic->title }}</h1>
         <div class="d-flex gap-4">
-            <div><img src="{{ $comic->thumb }}" alt="{{ $comic->title }}"></div>
-            <div class="">
+            <img src="{{ $comic->thumb }}" alt="{{ $comic->title }}" class="w-50">
+            <div>
                 <h5>Descrizione:</h5> 
                 <p>{{ $comic->description }}</p>
                 <h5>Prezzo:</h5> 
