@@ -1,12 +1,24 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+    <div class="container">
+
+        @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+            </ul>
+        </div>
+        @endif
+
         <h1 class="text-center">Modifica Fumetto</h1>
 
-        <form action="{{ route('comics.update', ['comic'=>$comic->id]) }}" method="POST">
+        <form action="{{ route('comics.update', ['comic' => $comic->id]) }}" method="POST">
             @method('PUT')
             @csrf
+
 
             <div class="mb-3">
                 <label for="title" class="form-label"> Titolo fumetto</label>
@@ -46,5 +58,4 @@
             <button class="btn btn-success" type="submit">Salva</button>
         </form>
     </div>
-
 @endsection

@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class EditComicRequest extends FormRequest
+class UpdateComicRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -27,7 +27,7 @@ class EditComicRequest extends FormRequest
             'price' => ['required','integer'],
             'series' => ['required'],
             'sale_date' => ['required'],
-            'type' => ['type']
+            'type' => ['required']
         ];
     }
 
@@ -36,8 +36,14 @@ class EditComicRequest extends FormRequest
      *
      * @return array
      */
-    public function messages()
-    {
-        return [];
+    public function messages() {
+        return [
+            'title' => 'Il titolo deve contenere almeno 5 caratteri',
+            'description' => 'La descrizione non può superare i 20 caratteri',
+            'price' => 'Il prezzo non può essere vuoto',
+            'series' => 'La serie non può essere vuota',
+            'sale_date' => 'Il periodo di vendita non può essere vuota',
+            'type' => 'La tipologia non può essere vuota',
+        ];
     }
 }

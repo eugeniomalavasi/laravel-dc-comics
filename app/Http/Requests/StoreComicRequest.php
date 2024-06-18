@@ -19,25 +19,31 @@ class StoreComicRequest extends FormRequest
      *
      * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array<mixed>|string>
      */
-    public function rules(): array
-    {
+    public function rules(): array {
         return [
             'title' => ['required', 'min:5'],
             'description' => ['required', 'max:20'],
             'price' => ['required','integer'],
             'series' => ['required'],
             'sale_date' => ['required'],
-            'type' => ['type']
+            'type' => ['required']
         ];
     }
+
 
     /**
      * Get custom messages for validator errors.
      *
      * @return array
      */
-    public function messages()
-    {
-        return [];
+    public function messages() {
+        return [
+            'title' => 'Il titolo deve contenere almeno 5 caratteri',
+            'description' => 'La descrizione non può superare i 20 caratteri',
+            'price' => 'Il prezzo non può essere vuoto',
+            'series' => 'La serie non può essere vuota',
+            'sale_date' => 'Il periodo di vendita non può essere vuota',
+            'type' => 'La tipologia non può essere vuota',
+        ];
     }
 }
