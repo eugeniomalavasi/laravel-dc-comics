@@ -22,6 +22,9 @@ This project allows users to:
 - Create, read, update, and delete comics.
 - View detailed information about individual comics.
 - Authenticate users to secure the comic management area.
+- 
+<img width="1049" alt="Immagine 2024-07-20 073627" src="https://github.com/user-attachments/assets/69cd485e-6924-424a-bc2a-04c7e8cf82ea">
+<img width="1030" alt="Immagine 2024-07-20 073538" src="https://github.com/user-attachments/assets/a6d8e583-d4b2-4d23-baec-d5f638bc16d4">
 
 ## Installation
 
