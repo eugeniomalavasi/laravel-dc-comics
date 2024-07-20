@@ -4,7 +4,7 @@
     <div class="container">
         <h1 class="text-center">Inserisci i dati del nuovo fumetto</h1>
 
-        <form action="{{ route('comics.store') }}" method="POST">
+        <form action="{{ route('comics.store') }}" method="POST" class="mb-3">
 
             @csrf
 
@@ -20,7 +20,7 @@
 
             <div class="mb-3">
                 <label for="img" class="form-label">Url immagine</label>
-                <input type="text" class="form-control" name="img" id="img">
+                <input type="text" class="form-control" name="thumb" id="img">
             </div>
 
             <div class="mb-3">
